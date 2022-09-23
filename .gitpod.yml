@@ -6,10 +6,26 @@ image:
   #- port: 3306
   #  onOpen: ignore
 
+# exposed ports
+ports:
+- port: 8080
+  onOpen: open-preview
+
+
+vscode:
+  extensions:
+    - pivotal.vscode-spring-boot
+    - vscjava.vscode-java-pack
+
+
 tasks:
   - init: >
       mysql -u root -e "create database example_app" &&
-      mysql -u root -p example_app < schema.sql
+      mysql -u root -p example_app < schema.sql &&
+      ./mvnw -B dependency:go-offline package -DskipTests
+    
+    command: java -jar target/*.jar
+    name: Run Employee SpringBoot
       
     #  cp .env.example .env &&
     # composer install
