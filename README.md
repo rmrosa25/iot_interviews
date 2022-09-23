@@ -4,10 +4,12 @@
 
 ## Table of Contents
 
- - Exercise 1 (#exercise1)
- - Exercise 2 (#exercise2)
+ - [Exercise 1](#exercise-1)
+    * [Exercise 1 : Question 1](#exercise-1-:-question-1)
+ - [Exercise 2](#exercise-2)
 
 ## Exercise 1
+```
 mysql -u root
 mysql > Use example_app
 mysql > show tables;
@@ -15,9 +17,12 @@ mysql > desc departments;
 mysql > desc employees;
 mysql > select * from departments;
 mysql > select * from employees;
+```
 
-Question 1
+## Questions
+
 Can you print count per department on employees table?
+
 Can you create a JOIN to print all the employees and their given department?
 
 ## Exercise 2
