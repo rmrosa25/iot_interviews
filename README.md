@@ -1,14 +1,13 @@
-## IoT Connectivity Interviews Exercise
+# IoT Connectivity Interviews Exercise
 
 [IoT Interviews](https://github.com/rmrosa25/iot_interviews) is a group of exercises to be used in Interviews.
 
-## Table of Contents
 
- - [Exercise 1](#exercise-1)
-    * [Exercise 1 : Question 1](#exercise-1-:-question-1)
- - [Exercise 2](#exercise-2)
+- [Exercise 1](#exercise-1)
+  - [Question 1](#question-1)
+- [Exercise 2](#exercise-2)
 
-## Exercise 1
+# Exercise 1
 ```
 mysql -u root
 mysql > Use example_app
@@ -19,13 +18,13 @@ mysql > select * from departments;
 mysql > select * from employees;
 ```
 
-## Questions
+## Question 1
 
 Can you print count per department on employees table?
 
 Can you create a JOIN to print all the employees and their given department?
 
-## Exercise 2
+# Exercise 2
 
 
 
