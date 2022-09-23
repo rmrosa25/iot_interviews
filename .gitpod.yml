@@ -1,13 +1,15 @@
 image:
   file: .gitpod.Dockerfile
 
-ports:
+#ports:
   # MySQL server
-  - port: 3306
-    onOpen: ignore
+  #- port: 3306
+  #  onOpen: ignore
 
 tasks:
   - init: >
       mysql -u root -e "create database example_app" &&
-      cp .env.example .env &&
-      composer install &&
+      mysql -u root -p example_app < schema.sql
+      
+    #  cp .env.example .env &&
+    # composer install
