@@ -1,0 +1,13 @@
+image:
+  file: .gitpod.Dockerfile
+
+ports:
+  # MySQL server
+  - port: 3306
+    onOpen: ignore
+
+tasks:
+  - init: >
+      mysql -u root -e "create database example_app" &&
+      cp .env.example .env &&
+      composer install &&
