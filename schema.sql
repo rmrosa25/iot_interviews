@@ -2,8 +2,8 @@ drop table if exists employees;
 create table employees
 (
     id int(11) not null auto_increment,
-    employee_name varchar(128),
-    department_id int(11),
+    employeeName varchar(128),
+    departmentId int(11),
     Primary Key (id)
 );
 
@@ -15,11 +15,11 @@ create table departments
     Primary Key (id)
 );
 
-insert into employees (employee_name, department_id) values ('Homer Simpson',4);
-insert into employees (employee_name, department_id) values ('Ned Flanders',1);
-insert into employees (employee_name, department_id) values ('Barney Gumble',5);
-insert into employees (employee_name, department_id) values ('Clancy Wiggum',3);
-insert into employees (employee_name) values ('Moe Syzslak');
+insert into employees (employeeName, departmentId) values ('Homer Simpson',4);
+insert into employees (employeeName, departmentId) values ('Ned Flanders',1);
+insert into employees (employeeName, departmentId) values ('Barney Gumble',5);
+insert into employees (employeeName, departmentId) values ('Clancy Wiggum',3);
+insert into employees (employeeName) values ('Moe Syzslak');
 
 
 insert departments (department_name) values ('Sales');

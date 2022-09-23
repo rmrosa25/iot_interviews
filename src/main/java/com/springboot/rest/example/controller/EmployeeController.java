@@ -54,7 +54,7 @@ public class EmployeeController {
 
     @GetMapping(path = "/all")
     public ResponseEntity<Page<EmployeeDto>> getEmployees(@PageableDefault(page = 0,
-            size = 30) @SortDefault.SortDefaults({@SortDefault(sort = "modified",
+            size = 30) @SortDefault.SortDefaults({@SortDefault(sort = "employee_name",
                     direction = Sort.Direction.DESC)}) Pageable pageable) {
         Page<EmployeeDto> Employees = EmployeeService.getAllEmployees(pageable);
         return ResponseEntity.ok(Employees);
