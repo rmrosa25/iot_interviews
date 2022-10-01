@@ -20,6 +20,7 @@ vscode:
 
 tasks:
   - init: >
+      mysql -u root -e "drop database example_app" &&
       mysql -u root -e "create database example_app" &&
       mysql -u root -p example_app < createTables.sql &&
       mysql -u root -p example_app < insertData.sql &&

@@ -1,7 +1,5 @@
 package com.springboot.rest.example.dto;
 
-import java.time.LocalDateTime;
-
 public class EmployeeDto {
 
     private Integer id;
