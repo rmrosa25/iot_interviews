@@ -1,0 +1,7 @@
+{
+    "database-modeling-markdown.database": "mysql",
+    "database-modeling-markdown.file.extension": ".db.md",
+    "database-modeling-markdown.method": "sql-create-table",
+    "database-modeling-markdown.source.folder": "./data/mysql/tables",
+    "database-modeling-markdown.target.path": "./createTables.sql"
+}
