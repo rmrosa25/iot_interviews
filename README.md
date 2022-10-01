@@ -4,8 +4,12 @@
 
 # Table of Contents
 
+- [IoT Connectivity Interviews Exercise](#iot-connectivity-interviews-exercise)
+- [Table of Contents](#table-of-contents)
 - [Setup your workspace](#setup-your-workspace)
-- [Exercise 1](#exercise-1)
+- [Workspace tips](#workspace-tips)
+  - [Database](#database)
+  - [Application](#application)
 - [Exercise 2](#exercise-2)
   - [Question 1](#question-1)
 
@@ -15,10 +19,15 @@ Initiate your GITPOD workspace
 
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/from-referrer/)
 
-After let's start below exercises
+# Workspace tips
 
+## Database
+Mysql database with following schema objects
 
-# Exercise 1
+[Employees] (/data/mysql/tables/employees.db.md)
+[Departments] (/data/mysql/tables/departments.db.md)
+
+## Application
  Fix Application and put it running with mysql db
 
 To compile and start
