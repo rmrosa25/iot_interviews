@@ -24,8 +24,9 @@ Initiate your GITPOD workspace
 ## Database
 Mysql database with following schema objects
 
-[Employees] (/data/mysql/tables/employees.db.md)
-[Departments] (/data/mysql/tables/departments.db.md)
+[Employees](/data/mysql/tables/employees.db.md)
+
+[Departments](/data/mysql/tables/departments.db.md)
 
 ## Application
  Fix Application and put it running with mysql db
