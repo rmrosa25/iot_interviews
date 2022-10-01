@@ -12,7 +12,7 @@
 
 | `Columns`           | `Cluster` | `Unique` |
 | ------------------- | --------- | -------- |
-| employeeName        | `true`    | `false`  |
+| employee_name        | `true`    | `false`  |
 
 
 ## `Columns[]`
@@ -20,5 +20,5 @@
 | `Label`    | `Name`       | `Type`             | `Nullable` | `Default` | `Comment` |
 | ---------- | ------------ | ------------------ | ---------- | --------- | --------- |
 | id         | id           | int auto_increment | `false`    |           |           |
-| Name       | employeeName | varchar(128)       | `false`    |           |           |
-| Department | departmentId | int                | `true`    |           |           |
+| Name       | employee_name | varchar(128)       | `false`    |           |           |
+| Department | department_id | int                | `true`    |           |           |

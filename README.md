@@ -24,12 +24,27 @@ Initiate your GITPOD workspace
 ## Database
 Mysql database with following schema objects
 
-[Employees](/data/mysql/tables/employees.db.md)
+[employees](/data/mysql/tables/employees.db.md)
 
-[Departments](/data/mysql/tables/departments.db.md)
+[departments](/data/mysql/tables/departments.db.md)
+
+Access to database from command line
+
+```
+mysql -u root -p example_app
+
+mysql > show tables;
+mysql > desc departments;
+mysql > desc employees;
+
+```
+
 
 ## Application
- Fix Application and put it running with mysql db
+
+SpringBoot application that expose employees services described below
+
+TODO: Link for swagger file
 
 To compile and start
 
@@ -43,29 +58,7 @@ Get your application url
 
  ```
  gitpod /workspace/iot_interviews (main) $ gp url 8080
- https://8080-rmrosa25-iotinterviews-tjtzq10vl3n.ws-eu67.gitpod.io
+ https://8080-rmrosa25-iotinterviews-n9i34m5f0yb.ws-eu69.gitpod.io
  ```
 
- Access to https://.../Employees/...
-
-# Exercise 2
-```
-mysql -u root
-mysql > Use example_app
-mysql > show tables;
-mysql > desc departments;
-mysql > desc employees;
-mysql > select * from departments;
-mysql > select * from employees;
-```
-
-## Question 1
-
-Can you print count per department on employees table?
-
-Can you create a JOIN to print all the employees and their given department?
-
-
-
-
-
+ Access to https://8080-rmrosa25-iotinterviews-n9i34m5f0yb.ws-eu69.gitpod.io/swagger-ui/index.html...

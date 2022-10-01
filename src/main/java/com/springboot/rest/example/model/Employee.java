@@ -3,6 +3,8 @@ package com.springboot.rest.example.model;
 
 
 import java.time.LocalDateTime;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
@@ -21,8 +23,12 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    
+    @Column(name="id")
     private Integer id;
+    @Column(name="employee_name")
     private String employeeName;
+    @Column(name="department_id")
     private Integer departmentId;
     
 

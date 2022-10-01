@@ -12,11 +12,11 @@
 
 | `Columns`           | `Cluster` | `Unique` |
 | ------------------- | --------- | -------- |
-| departmentName      | `true`    | `false`  |
+| department_name      | `true`    | `false`  |
 
 ## `Columns[]`
 
 | `Label`    | `Name`           | `Type`             | `Nullable` | `Default` | `Comment` |
 | ---------- | -----------------| ------------------ | ---------- | --------- | --------- |
 | id         | id               | int auto_increment | `false`    |           |           |
-| Name       | departmentName   | varchar(128)       | `false`    |           |           |
+| Name       | department_name   | varchar(128)       | `false`    |           |           |
