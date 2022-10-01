@@ -21,7 +21,8 @@ vscode:
 tasks:
   - init: >
       mysql -u root -e "create database example_app" &&
-      mysql -u root -p example_app < schema.sql &&
+      mysql -u root -p example_app < createTables.sql &&
+      mysql -u root -p example_app < insertData.sql &&
       ./mvnw -B dependency:go-offline package -DskipTests
     
     command: java -jar target/*.jar
