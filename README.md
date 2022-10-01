@@ -12,11 +12,8 @@
 # Setup your workspace
 
 Initiate your GITPOD workspace
-TODO: This reference should be relative
 
-<a href="https://gitpod.io/#https://github.com/rmrosa25/iot_interviews/" style="padding: 10px;">
-    <img src="https://gitpod.io/button/open-in-gitpod.svg" width="150" alt="Push" align="center">
-</a>
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/from-referrer/)
 
 After let's start below exercises
 
