@@ -10,8 +10,6 @@
 - [Workspace tips](#workspace-tips)
   - [Database](#database)
   - [Application](#application)
-- [Exercise 2](#exercise-2)
-  - [Question 1](#question-1)
 
 # Setup your workspace
 
@@ -39,12 +37,19 @@ mysql > desc employees;
 
 ```
 
+Recreate Database
+
+```
+mysql -u root -e "drop database example_app";
+mysql -u root -e "create database example_app";
+mysql -u root -p example_app < createTables.sql;
+mysql -u root -p example_app < insertData.sql;
+
+```
 
 ## Application
 
 SpringBoot application that expose employees services described below
-
-TODO: Link for swagger file
 
 To compile and start
 
@@ -59,6 +64,7 @@ Get your application url
  ```
  gitpod /workspace/iot_interviews (main) $ gp url 8080
  https://8080-rmrosa25-iotinterviews-n9i34m5f0yb.ws-eu69.gitpod.io
+
  ```
 
- Access to https://8080-rmrosa25-iotinterviews-n9i34m5f0yb.ws-eu69.gitpod.io/swagger-ui/index.html...
+ Access to https://8080-rmrosa25-iotinterviews-n9i34m5f0yb.ws-eu69.gitpod.io/
