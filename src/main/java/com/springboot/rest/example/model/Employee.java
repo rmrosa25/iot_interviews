@@ -2,13 +2,21 @@
 package com.springboot.rest.example.model;
 
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Entity
@@ -23,8 +31,13 @@ public class Employee {
     private Integer id;
     @Column(name="employee_name")
     private String employeeName;
-    @Column(name="department_id")
+    //@Column(name="department_id")
+    @Column
     private Integer departmentId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "departmentId", referencedColumnName = "id", insertable = false, updatable = false)
+    @Fetch(FetchMode.JOIN)
+    private Department department;
     
 
     /**
@@ -68,5 +81,15 @@ public class Employee {
     public void setDepartmentId(Integer departmentId) {
         this.departmentId = departmentId;
     }
+
+
+    public Department getDepartment() {
+        return this.department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
 
 }
