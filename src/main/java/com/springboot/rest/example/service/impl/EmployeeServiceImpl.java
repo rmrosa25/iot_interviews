@@ -57,7 +57,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         EmployeeDto.setId(Employee.getId());
         EmployeeDto.setEmployeeName(Employee.getEmployeeName());
         EmployeeDto.setDepartmentId(Employee.getDepartmentId());
-        
+
         return EmployeeDto;
     }
 
@@ -89,11 +89,12 @@ public class EmployeeServiceImpl implements EmployeeService {
         EmployeeDto.setId(Employee.getId());
         EmployeeDto.setEmployeeName(Employee.getEmployeeName());
         EmployeeDto.setDepartmentId(Employee.getDepartmentId());
-        DepartmentDto DepartmentDto=new DepartmentDto();
-        DepartmentDto.setDepartmentName(Employee.getDepartment().getDepartmentName());
-        DepartmentDto.setId(Employee.getDepartment().getId());
-        EmployeeDto.setDepartment(DepartmentDto);
-
+        if (Employee.getDepartment() != null) {
+            DepartmentDto DepartmentDto = new DepartmentDto();
+            DepartmentDto.setDepartmentName(Employee.getDepartment().getDepartmentName());
+            DepartmentDto.setId(Employee.getDepartment().getId());
+            EmployeeDto.setDepartment(DepartmentDto);
+        }
 
         return EmployeeDto;
     }
@@ -113,15 +114,16 @@ public class EmployeeServiceImpl implements EmployeeService {
                 EmployeeDto.setEmployeeName(Employee.getEmployeeName());
                 EmployeeDto.setDepartmentId(Employee.getDepartmentId());
 
-                DepartmentDto DepartmentDto=new DepartmentDto();
-                DepartmentDto.setDepartmentName(Employee.getDepartment().getDepartmentName());
-                DepartmentDto.setId(Employee.getDepartment().getId());
-                EmployeeDto.setDepartment(DepartmentDto);
-                
+                if (Employee.getDepartment() != null) {
+                    DepartmentDto DepartmentDto = new DepartmentDto();
+                    DepartmentDto.setDepartmentName(Employee.getDepartment().getDepartmentName());
+                    DepartmentDto.setId(Employee.getDepartment().getId());
+                    EmployeeDto.setDepartment(DepartmentDto);
+                }
                 EmployeesDto.add(EmployeeDto);
+
             });
-            EmployeesDtoPage =
-                    new PageImpl<>(EmployeesDto, pageable, EmployeesPage.getTotalElements());
+            EmployeesDtoPage = new PageImpl<>(EmployeesDto, pageable, EmployeesPage.getTotalElements());
         }
         return EmployeesDtoPage;
     }
