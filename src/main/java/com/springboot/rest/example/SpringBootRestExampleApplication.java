@@ -11,7 +11,6 @@ import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.Tag;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @EnableJpaAuditing
 @SpringBootApplication
@@ -35,4 +34,5 @@ public class SpringBootRestExampleApplication {
         .select().apis(RequestHandlerSelectors.withClassAnnotation(RestController.class))
         .build();
   }
+  
 }

@@ -5,7 +5,7 @@ public class EmployeeDto {
     private Integer id;
     private String employeeName;
     private Integer departmentId;
-
+    private DepartmentDto department;
     
     
 
@@ -50,5 +50,15 @@ public class EmployeeDto {
     public void setDepartmentId(Integer departmentId) {
         this.departmentId = departmentId;
     }
+
+
+    public DepartmentDto getDepartment() {
+        return this.department;
+    }
+
+    public void setDepartment(DepartmentDto department) {
+        this.department = department;
+    }
+
 
 }

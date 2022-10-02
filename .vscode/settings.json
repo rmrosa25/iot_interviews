@@ -3,5 +3,6 @@
     "database-modeling-markdown.file.extension": ".db.md",
     "database-modeling-markdown.method": "sql-drop-then-create-table",
     "database-modeling-markdown.source.folder": "./data/mysql/tables",
-    "database-modeling-markdown.target.path": "./createTables.sql"
+    "database-modeling-markdown.target.path": "./createTables.sql",
+    "java.configuration.updateBuildConfiguration": "automatic"
 }

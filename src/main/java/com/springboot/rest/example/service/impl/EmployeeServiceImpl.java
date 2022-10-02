@@ -8,6 +8,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import com.springboot.rest.example.dto.DepartmentDto;
 import com.springboot.rest.example.dto.EmployeeDto;
 import com.springboot.rest.example.dto.EmployeeExistingDto;
 import com.springboot.rest.example.dto.EmployeeNewDto;
@@ -87,7 +89,12 @@ public class EmployeeServiceImpl implements EmployeeService {
         EmployeeDto.setId(Employee.getId());
         EmployeeDto.setEmployeeName(Employee.getEmployeeName());
         EmployeeDto.setDepartmentId(Employee.getDepartmentId());
-       
+        DepartmentDto DepartmentDto=new DepartmentDto();
+        DepartmentDto.setDepartmentName(Employee.getDepartment().getDepartmentName());
+        DepartmentDto.setId(Employee.getDepartment().getId());
+        EmployeeDto.setDepartment(DepartmentDto);
+
+
         return EmployeeDto;
     }
 
@@ -105,6 +112,11 @@ public class EmployeeServiceImpl implements EmployeeService {
                 EmployeeDto.setId(Employee.getId());
                 EmployeeDto.setEmployeeName(Employee.getEmployeeName());
                 EmployeeDto.setDepartmentId(Employee.getDepartmentId());
+
+                DepartmentDto DepartmentDto=new DepartmentDto();
+                DepartmentDto.setDepartmentName(Employee.getDepartment().getDepartmentName());
+                DepartmentDto.setId(Employee.getDepartment().getId());
+                EmployeeDto.setDepartment(DepartmentDto);
                 
                 EmployeesDto.add(EmployeeDto);
             });
