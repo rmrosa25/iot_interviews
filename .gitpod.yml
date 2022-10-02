@@ -16,6 +16,9 @@ vscode:
   extensions:
     - pivotal.vscode-spring-boot
     - vscjava.vscode-java-pack
+    - yzhang.markdown-all-in-one
+    - stevennyang.database-modeling-markdown
+    - sohibe.java-generate-setters-getters
 
 
 tasks:
