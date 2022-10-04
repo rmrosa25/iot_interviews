@@ -4,7 +4,7 @@ metadata:
   name: iot_interviews
   annotations:
     github.com/project-slug: rmrosa25/iot_interviews
-    backstage.io/techdocs-ref: https://github.com/rmrosa25/iot_interviews/blob/main/README.md
+    backstage.io/techdocs-ref: README.md
 spec:
   type: other
   lifecycle: unknown
